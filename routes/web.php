@@ -34,6 +34,6 @@ Route::group(['middleware'=>['auth']],function(){
     Route::get('/services/{service}/booking',[ServiceController::class,'booking'])->name('booking');
     Route::post('/done',[BookingController::class,'store'])->name('store');
 });
-Route::group(['middleware'=>['auth','isAdmin']],function(){
-    Route::get('/admin',function(){return view('admin.admin');})->name('admin');
-});
+Route::get('/admin1',function(){return view('admin1.index');})->name('admin');
+// Route::group(['middleware'=>['auth','isAdmin']],function(){
+// });
